@@ -1,0 +1,24 @@
+
+
+.container-login {
+  background-color: #0A1F2E;
+  height: 400px;
+  width: 500px;
+  border-radius: 10%;
+}
+
+.title-login {
+  color: #ffa500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.message-login {
+  color: white;
+  font-weight: bold;
+}
+
+.text-login {
+  color: white;
+  font-weight: bold;
+}
+

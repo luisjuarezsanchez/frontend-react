@@ -1,0 +1,19 @@
+# Etapa de construcción (build stage)
+FROM node:14-alpine
+
+WORKDIR /app
+
+# Copiar archivos de configuración de npm
+COPY package.json package-lock.json ./
+
+# Instalar dependencias
+RUN npm install
+
+# Copiar archivos de la aplicación
+COPY . .
+
+# Exponer el puerto 3000 para el servidor de desarrollo de React
+EXPOSE 3000
+
+# Comando para iniciar el servidor de desarrollo
+CMD ["npm", "start"]

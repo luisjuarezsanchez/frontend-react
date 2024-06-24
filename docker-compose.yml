@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .   # Directorio donde se encuentra tu Dockerfile.dev para React
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"   # Puerto del host : Puerto del contenedor (Servidor de desarrollo de React)
+    volumes:
+      - .:/app      # Sincroniza el directorio actual con /app en el contenedor
